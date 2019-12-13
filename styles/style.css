@@ -9,6 +9,7 @@ Common Styles
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
 }
+
 body {
 	background-color: #fff;
 	color:  #565252;
@@ -17,7 +18,6 @@ body {
 	font-weight: 400;
 	text-rendering: optimizeLegibility;
  }
-
 
 
  [class*="col-"] {
@@ -584,6 +584,7 @@ Contacts Styles
 	text-decoration: none;
 
 }
+
 .contact div {
 	color: #96a7ac;
 	background: #fff;
@@ -596,19 +597,18 @@ Contacts Styles
 	display: inline-block;
 	float: left;
 	margin-right: 20px;
-
 }
 
-.contact p {
-    
+.contact p {    
 	padding-top: 15px;
 	padding-left: 0px;
 }
-#contacts-list {
 
+#contacts-list {
 	display: block;
     margin-top: 0px;
 }
+
 .contacts-variant{
 	display: block;
     margin-left: auto;
@@ -634,12 +634,16 @@ Galery Styles
 .container {
   padding: 0 16px;
 }
+.container p{
+	margin: 0;
+}
 
 .container::after, .row::after {
   content: "";
   clear: both;
   display: table;
 }
+
 .title {
   color: grey;
 }
@@ -652,7 +656,7 @@ Galery Styles
 .modal-dialog {
 	clear: both;
 	position: center;
-	/*margin: 0 !important;*/
+	margin: 0 auto;
 }
 
 .modal-dialog-centered {
@@ -705,11 +709,11 @@ Galery Styles
 	margin: 0;
 }
 
-.small {
+.smal {
 	padding: 20px;
 }
 
-.small li {
+.smal li {
 	list-style: none;
 }
 
@@ -732,18 +736,6 @@ Aboutme Styles
 	visibility: hidden;
 }   
 
-.accordion {
-  white-space: normal;
-  background-color: #96a7ac;
-  border-radius: 5px;
-  padding: 18px;
-  width: 83.33%;
-  margin-left: 8.33%;  
-  transition: 0.4s;
-  letter-spacing: 0.1em;
-  color: #fff;
-  }
-
 .link-outside{
     text-align: center;
     width: 83.33%;
@@ -760,25 +752,6 @@ Aboutme Styles
     border-image: initial;
   }    	
 
-#name-button:hover {
-  background-color: #96a7ac;
-  color: #000;
-  opacity: 0.9;
-}
-
- #name-button{
-	cursor: pointer;
-	color: #fff;
-	text-align: center;
-    transition: 0.4s;
-    letter-spacing: 0.1em;
-}
-
-.active #name-button{
-	color: #000;
-
-}
-
 .link-outside a{
 	color: #fff;
 	line-height: 3vw;
@@ -793,50 +766,35 @@ Aboutme Styles
   opacity: 0.9;
 }
 
-.panel {
-  padding: 0px 8.33%;
-  background-color: white;
-  position: relative;
-  display: none;
-  overflow: hidden;
-}
-
-.panel iframe{
-	width: 100%;	
-}
-
 button{
 	outline: none !important;
 }
-
-.accordion:before{
-  content: '\02795'; /* Unicode character for "plus" sign (+) */
-  font-size: 15px;
-  color: #fff;
-  float: left;
-  margin-right: 5px;
-  margin-top: 3px;
+figure{
+	margin: 0;
 }
 
-.accordion.active:before {
-  content: "\2796"; /* Unicode character for "minus" sign (-) */
-}
 
 /********************************
 Media query Styles
 *********************************/
 
-
-
 @media only screen and (max-width: 1024px) {
   
-  [class*="col-"] {
-    width: 100%;
-  }
-
+ /* [class*="col-"] {
+  width: 100%; 
+ }*/
+.col-3, .col-4, .col-5, .col-6{
+	width: 100%;
+	max-width: 100%;
+	flex: 0 0 100%;
+}
   h2 {
   	margin-left: 20px;
   	margin-right: 20px;
+  }
+
+  figure {
+  	margin-block-end:0;
   }
 
   .features-icon {
@@ -875,8 +833,6 @@ Media query Styles
 	max-width: 83.33%;
   }
   
-  
-
   #main-nav {
   	float: right;
   	margin-top: 10px;
@@ -895,7 +851,7 @@ Media query Styles
 
   #sticky-nav #main-nav li a:hover,
   #sticky-nav #main-nav li a:active {
-		border-bottom: 0;
+	border-bottom: 0;
   }
 
   #logo-text {
@@ -907,7 +863,7 @@ Media query Styles
   	max-width: 90%;
   }
 
-    .column {
+  .column {
     width: 100%;
     display: block;
   }
@@ -917,9 +873,14 @@ Media query Styles
 	width: 100%;
 	height: 100%;
 	margin-left: 0;
-}
+ }
 
-body .modal-open{
+  .link-outside a{
+	line-height: 0.5em;
+	font-size: 4.5vw;
+ }
+
+ body .modal-open{
   padding-right: 0;
 }
 
@@ -927,17 +888,12 @@ body .modal-open{
 	position: center;
 }
 
-.link-outside a{
-	line-height: 0.5em;
-	font-size: 4.5vw;
+element.style{
+  padding-right: 0;
 }
-.modal{
-	 /*left:0; 
-	 right:0;
-	 top: 0; 
-	 transform:translate(0,0);*/
-	 align-items:center;
+
 }
+
 
 
 
